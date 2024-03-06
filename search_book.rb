@@ -6,7 +6,8 @@ require 'uri'
 require './yolp'
 require 'sinatra'
 
-require 'dotenv/load'
+require 'dotenv'
+Dotenv.load
 
 cinii_appid = ENV['cinii_API_ID']
 yahoo_appid = ENV['yahoo_API_ID']
