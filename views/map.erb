@@ -1,0 +1,25 @@
+<!-- map.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map with Address</title>
+</head>
+<body>
+  <!-- OpenStreetMapの埋め込みフレーム -->
+  <iframe
+    width="800"
+    height="600"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=<%= @bbox0 %>%2C<%= @bbox1 %>%2C<%= @bbox2 %>%2C<%= @bbox3 %>&amp;layer=mapnik&amp;marker=<%= @longitude %>%2C<%= @latitude %>"
+    style="border: 1px solid black;"
+    name="map"
+  ></iframe>
+  <div>
+    <!-- 住所と名前を表示 -->
+    <h2>住所: <%= @address %></h2>
+  </div>
+</body>
+</html>

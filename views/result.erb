@@ -1,0 +1,18 @@
+<!-- result.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8' />
+  <title>結果</title>
+</head>
+<body>
+  <h1>本を所蔵している図書館の検索結果</h1>
+  <% @info.each do |library| %>
+    <p>
+      <a href="/map?address=<%= library[:address] %>">図書館名: <%= library[:name] %>, 住所: <%= library[:address] %></a>
+
+    </p>
+  <% end %>
+</body>
+</html>

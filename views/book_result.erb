@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8' />
+  <title>結果</title>
+</head>
+<body>
+  <h1>本の検索結果</h1>
+  <% @info.each do |book| %>
+    <p>
+      <a href="/result?id=<%= book[:id] %>">図書ID: <%= book[:id] %>, タイトル: <%= book[:title] %></a>
+    </p>
+  <% end %>
+</body>
+</html>
